@@ -1,0 +1,14 @@
+# Site settings
+title: Seth Wiesman 
+email: sjw3kf@mail.missouri.edu
+description: > # this means to ignore newlines until "baseurl:"
+    
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "sjwiesman.github.io" # the base hostname & protocol for your site
+twitter_username: sjwiesman
+github_username:  sjwiesman
+
+# Build settings
+markdown: kramdown
+
+google_analytics: #GA code
