@@ -20,5 +20,4 @@ hash(n) = \underbrace{00100101}_\text{k=8}\underbrace{\overbrace{0000000}^\text{
 $$
 
 So given this hash function and $$k = 8$$ we would store the number 7 into bucket 37 if that is greater than the number already in that bucket. 
-
 By storing multiple 0-bit sequence lengths, even if HyperLogLog does find one or two outliers it will have many more numbers which accurately represent the number of items seen. The buckets are combined by taking their harmonic mean which throws out outliers. The authors of the paper also present several constants for range and bias correction although that is outside the scope of this post.    While its memory footprint is much smaller than a basic set, it is still just as easy to parallelize across many machines. Each machine first calculates its own group of HyperLogLog buckets from the content that it has locally. These individual results are then combined by takeing the max value of each corresponding bucket. Finally, the resulting group of buckets can be combined to generate a final estimate.    p.s. This post contains 301 distinct words
